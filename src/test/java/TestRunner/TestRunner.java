@@ -5,6 +5,10 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Features", glue = "stepdefinition")
+@CucumberOptions(features = "Features",
+        glue = "stepdefinition"
+, dryRun = false , tags = "@login" ,
+        plugin = {"pretty", "html:target/cucumber/report.html"}
+)
 public class TestRunner {
 }
